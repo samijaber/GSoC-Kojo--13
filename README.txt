@@ -1,5 +1,4 @@
-Simple prototype on connecting to a VM (for debugging purposes). So far, it simply connects ProgramA to the Wrapper for factorial.
-
+prototype on connecting to a VM (for debugging purposes). It now prints the passed arguments to a Method and its return values.
 ---------------------------------
 How to run:
 
