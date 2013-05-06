@@ -28,16 +28,21 @@ object ProgramA extends App {
   
   val evtReqMgr = vm.eventRequestManager
   val mthdExVal = evtReqMgr.createMethodExitRequest()
+  mthdExVal.setSuspendPolicy(EventRequest.SUSPEND_NONE)
   mthdExVal.enable()
 
   val evtQueue = vm.eventQueue
 
-  val evtSet = evtQueue.remove()
-  for (evt <- evtSet.eventIterator) {
-      evt match {
-        case method_evt: MethodExitEvent => println("The value is " + method_evt.returnValue())
-        case all => println("whatever " + all.request)
-        }
-    }
-
+  while(true)
+  {
+    val evtSet = evtQueue.remove()
+    for (evt <- evtSet.eventIterator) {
+        evt match {
+          case method_evt: MethodExitEvent => println("The value is " + method_evt.returnValue())
+          case all => println("whatever " + all.request)
+          }
+      }
+    //comment this line out for non-infinite printing
+    vm.resume
+  }
 }
