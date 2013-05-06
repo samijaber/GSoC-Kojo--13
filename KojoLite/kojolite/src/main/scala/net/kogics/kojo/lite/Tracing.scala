@@ -17,10 +17,6 @@ class Tracing {
   
   var initconn: LaunchingConnector = _
   var mainThread: ThreadReference = _
-  var vm: VirtualMachine = _
-  var allThrds: Array[ThreadReference] = _
-  var excludes: Array[String] = _
-  var evtQueue: EventQueue = _
 
 def printToFile(f: java.io.File)(op: java.io.PrintWriter => Unit) {
   val p = new java.io.PrintWriter(f)
@@ -34,23 +30,22 @@ def trace(code: String){
 	  data.foreach(p.println)
   })
   
+  
   //Connect to target VM
-  vm = getVM(initconn)
+  val vm = getVM(initconn)
   println("Attached to process '" + vm.name + "'")
 
 
   //Create Event Requests
-  excludes = Array("java.*", "javax.*", "sun.*", "com.sun.*", "com.apple.*")
-  createRequests(excludes);
-
+  val excludes = Array("java.*", "javax.*", "sun.*", "com.sun.*", "com.apple.*")
+  createRequests(excludes, vm);
 
   //Iterate through Events
-  evtQueue = vm.eventQueue
+  val evtQueue = vm.eventQueue
   vm.resume
 
-
   //Find main thread in target VM
-  allThrds = vm.allThreads.toArray.asInstanceOf[Array[ThreadReference]]
+  val allThrds = vm.allThreads
   allThrds.foreach { x =>
     if (x.name == "main")
       mainThread = x
@@ -69,17 +64,18 @@ def trace(code: String){
             val argval = frame.getValue(n)
             println("Method Enter Event (arg n): " + argval)
             }
-            catch {
+         catch {
               case _: Throwable => println("Method Enter Event: " + methodEnterEvt.method().name)
             }
         case methodExitEvt: MethodExitEvent   => println("Method Exit Event (return value): " + methodExitEvt.returnValue)
-        case _                                =>
+        case _                                => println("Other")
       }
     }
     evtSet.resume()
   }
+}
 
-  def createRequests(excludes : Array[String]) {
+  def createRequests(excludes : Array[String], vm: VirtualMachine) {
     val evtReqMgr = vm.eventRequestManager
     
     val mthdEnterVal = evtReqMgr.createMethodEntryRequest()
@@ -114,7 +110,7 @@ def trace(code: String){
      throw new Error("Bad launching connector");
     // concatenate all tracer's input args into a single string
     val sb = new StringBuffer();
-    sb.append(" Wrapper ")
+    sb.append(" Wrapper 10")
   //  for (i <- 0 to (args.length -1))
     // sb.append(args(i) + " ");
     
@@ -122,5 +118,4 @@ def trace(code: String){
     val vm = connector.launch(connArgs)
     vm
   }
-}
 }
