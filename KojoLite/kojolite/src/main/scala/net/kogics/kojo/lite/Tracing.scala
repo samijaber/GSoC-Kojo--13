@@ -1,8 +1,7 @@
 package net.kogics.kojo.lite
 
 import scala.util.control.Breaks._
-import scala.collection.JavaConversions.asScalaBuffer
-import scala.collection.JavaConversions.asScalaIterator
+import scala.collection.JavaConversions._
 import com.sun.jdi.connect._
 import com.sun.jdi.event.MethodExitEvent
 import com.sun.jdi.request._
@@ -19,7 +18,7 @@ class Tracing {
   var initconn: LaunchingConnector = _
   var mainThread: ThreadReference = _
   var vm: VirtualMachine = _
-  var allThrds: List[ThreadReference] = _
+  var allThrds: Array[ThreadReference] = _
   var excludes: Array[String] = _
   var evtQueue: EventQueue = _
 
@@ -30,7 +29,7 @@ def printToFile(f: java.io.File)(op: java.io.PrintWriter => Unit) {
   
 def trace(code: String){
   //create the file
-  val data = Array("object Wrapper { def main(args: Array[String]) {} ", code, "}")
+  val data = Array("object Wrapper { \n def main(args: Array[String]) {} \n", code, "}")
   printToFile(new File("Wrapper.scala"))(p => {
 	  data.foreach(p.println)
   })
@@ -51,7 +50,7 @@ def trace(code: String){
 
 
   //Find main thread in target VM
-  allThrds = vm.allThreads.asInstanceOf[List[ThreadReference]]
+  allThrds = vm.allThreads.toArray.asInstanceOf[Array[ThreadReference]]
   allThrds.foreach { x =>
     if (x.name == "main")
       mainThread = x
@@ -115,11 +114,11 @@ def trace(code: String){
      throw new Error("Bad launching connector");
     // concatenate all tracer's input args into a single string
     val sb = new StringBuffer();
-    sb.append("Wrapper 10")
+    sb.append(" Wrapper ")
   //  for (i <- 0 to (args.length -1))
     // sb.append(args(i) + " ");
     
-  //  mArgs.setValue(sb.toString()); // assign args to main field
+    mArgs.setValue(sb.toString()); // assign args to main field
     val vm = connector.launch(connArgs)
     vm
   }
