@@ -1,0 +1,46 @@
+[0m[[0minfo[0m] [0mRunning net.kogics.kojo.lite.DesktopMain [0m
+[0m[[0mdebug[0m] [0mStarting sandboxed run...[0m
+[0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
+[0m[[0mdebug[0m] [0m  Classpath:[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/target/scala-2.10/classes[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/AppleJavaExtensions.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/autocomplete.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/deploy.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/docking-frames-common.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/docking-frames-core.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/geogebra.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/geogebra_algos.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/geogebra_cas.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/geogebra_export.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/geogebra_gui.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/geogebra_javascript.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/geogebra_main.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/geogebra_properties.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/group-panel.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/httpunit.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/javaws.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/jfugue-4.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/jl1.0.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/jlatexmath.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/js-1.6R5.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/jtidy-4aug2000r7-dev.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/netscape_javascript.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/rstaui.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/rsyntaxtextarea.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/Documents/Code/GSoC-Kojo--13/KojoLite/kojolite/lib/scalariform.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/.sbt/boot/scala-2.10.1/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/.sbt/boot/scala-2.10.1/lib/scala-compiler.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/.ivy2/cache/org.scala-lang/scala-actors/jars/scala-actors-2.10.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/.ivy2/cache/org.scala-lang/scala-swing/jars/scala-swing-2.10.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/.ivy2/cache/org.piccolo2d/piccolo2d-core/bundles/piccolo2d-core-1.3.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/.ivy2/cache/org.piccolo2d/piccolo2d-extras/bundles/piccolo2d-extras-1.3.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/.ivy2/cache/com.vividsolutions/jts/jars/jts-1.12.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/samijaber/.ivy2/cache/com.h2database/h2/jars/h2-1.3.168.jar[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main to exit[0m
+[0m[[0mdebug[0m] [0m	Thread run-main exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread AWT-Shutdown to exit[0m
+[0m[[0mdebug[0m] [0m	Thread AWT-Shutdown exited.[0m
+[0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
+[0m[[0mdebug[0m] [0mSandboxed run complete..[0m
+[0m[[0mdebug[0m] [0mExited with code 0[0m
