@@ -1,5 +1,5 @@
 The content of this prototype ended up successfully becoming the Tracing feature in the Kojo IDE. 
-Head over to http://kogics.net/kojo-downloadto download the IDE and see what it looks like!
+Head over to http://kogics.net/kojo-download to download the IDE and see what it looks like!
 
 
 
