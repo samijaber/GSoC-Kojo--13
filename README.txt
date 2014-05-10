@@ -1,8 +1,7 @@
 The content of this prototype ended up successfully becoming the Tracing feature in the Kojo IDE. 
 Head over to http://kogics.net/kojo-download to download the IDE and see what it looks like!
 
-
-
+Blog press release for Tracing update: http://kojoenv.wordpress.com/2013/09/15/new-kojo-release-140813/
 
 
 
